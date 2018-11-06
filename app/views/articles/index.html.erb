@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="mt-4 mb-4">All Articles</h1>
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" action='delete'>
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <% @articles.each do |article| %>
+    <div class="article-divide">
+      <h2 class="mt-3" ><%= link_to article.title, article_path(article), id: "title-click" %></h2>
+      <p><%= article.content %></p>
+    </div>
+  <% end %>
+</div>
+
